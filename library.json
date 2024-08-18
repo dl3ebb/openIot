@@ -1,6 +1,6 @@
 {
     "name": "openIot",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A library for iot projects based on ESP32 modules. Includes common tools and connectivity, such as NTP, MQTT, REST, Update etc. ",
     "keywords": "iot, open-iot",
     "repository":
@@ -23,6 +23,6 @@
 	      "knolleary/PubSubClient" : "^2.8",
 	      "stevemarple/AsyncDelay" : "^1.1.2"
     },
-    "frameworks": "*",
-    "platforms": "*"
+    "frameworks": "arduino",
+    "platforms": ["espressif32"]
   }
