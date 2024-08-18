@@ -1,0 +1,31 @@
+<!--
+   Configuration Page for the syslog server
+-->
+<table class="form_table" style="width:800px;">
+	<tr>
+		<td colspan="2" class="form-headline">Logging</td>
+	</tr>
+	<tr>
+		<td colspan="2"><span id="_SYS_SYSLOG_ENABLE"></td>
+	</tr>
+	<tr>
+		<td class="label"><label>Syslog server</label></td>		
+		<td class="form-input"><span id="_SYS_SYSLOG_SERVER"></span></td>
+	</tr>
+	<tr>
+		<td class="form-button" conspan="2"><span id="_SYS_SYSLOG_SAVE"></span></td>
+	</tr>
+</table>
+<script>
+   	const syslogEnable = new CheckBox ("_SYS_SYSLOG_ENABLE", {label:"Enable syslog server"}).getElement();
+   	const syslogServer = new TextInput ("_SYS_SYSLOG_SERVER", {maxlength: 32, width: "180px"}).getElement();
+	new Button ("_SYS_SYSLOG_SAVE", "Save");
+
+	syslogEnable.addEventListener('change', function() {
+		if (this.checked) {
+			syslogServer.disabled = false;
+	 	} else {
+			syslogServer.disabled = true;
+		}
+	});
+</script>

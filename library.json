@@ -1,0 +1,28 @@
+{
+    "name": "Open-Iot",
+    "version": "1.0.0",
+    "description": "A library for iot projects based on ESP32 modules. Includes common tools and connectivity, such as NTP, MQTT, REST, Update etc. ",
+    "keywords": "iot, open-iot",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/dl3ebb/openIot"
+    },
+    "authors":
+    [
+      {
+        "name": "Achim Breuer",
+        "email": "achim.breuer@auecamp.de",
+        "maintainer": true
+      }
+    ],
+    "license": "GPL3",
+    "homepage": "https://github.com/dl3ebb/openIot/",
+    "dependencies": {
+        "me-no-dev/ESP Async WebServer":"^1.2.4", 
+	      "knolleary/PubSubClient" : "^2.8",
+	      "stevemarple/AsyncDelay" : "^1.1.2"
+    },
+    "frameworks": "*",
+    "platforms": "*"
+  }
