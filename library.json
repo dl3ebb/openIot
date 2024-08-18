@@ -1,5 +1,5 @@
 {
-    "name": "Open-Iot",
+    "name": "openIot",
     "version": "1.0.0",
     "description": "A library for iot projects based on ESP32 modules. Includes common tools and connectivity, such as NTP, MQTT, REST, Update etc. ",
     "keywords": "iot, open-iot",
@@ -16,7 +16,7 @@
         "maintainer": true
       }
     ],
-    "license": "GPL3",
+    "license": "GPL-3.0",
     "homepage": "https://github.com/dl3ebb/openIot/wiki",
     "dependencies": {
         "me-no-dev/ESP Async WebServer":"^1.2.4", 
