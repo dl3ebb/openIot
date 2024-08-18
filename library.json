@@ -6,7 +6,7 @@
     "repository":
     {
       "type": "git",
-      "url": "https://github.com/dl3ebb/openIot"
+      "url": "https://github.com/dl3ebb/openIot.git"
     },
     "authors":
     [
@@ -17,7 +17,7 @@
       }
     ],
     "license": "GPL3",
-    "homepage": "https://github.com/dl3ebb/openIot/",
+    "homepage": "https://github.com/dl3ebb/openIot/wiki",
     "dependencies": {
         "me-no-dev/ESP Async WebServer":"^1.2.4", 
 	      "knolleary/PubSubClient" : "^2.8",
