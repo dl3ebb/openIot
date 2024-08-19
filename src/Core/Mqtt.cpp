@@ -38,35 +38,43 @@ void Mqtt::begin (const char * mqttServer, int mqttPort, const char *  _mqttClie
  * Zhe Topic is built from <mqttPrefix>/<elementId>/<subtopic>.
  */ 
 void Mqtt::publish (Element *_element, const char * _subtopic, boolean _value) {
-    char topic[200];
-    sprintf (topic,"%s/app/%s/%s", mqttPrefix, _element->getId(),_subtopic);
-    client.publish(topic, _value ? "true" : "false",true);
+    if (client.connected()) {
+        char topic[200];
+        sprintf (topic,"%s/app/%s/%s", mqttPrefix, _element->getId(),_subtopic);
+        client.publish(topic, _value ? "true" : "false",true);
+    }
 }
 
 /**
  * These methods are used to publish core datat to MQTT
  */
 void Mqtt::publish (const char * _topic, const char * _subtopic, const char * _value) {
-    char topic[200];
-    sprintf (topic,"%s/%s", _topic,_subtopic);
-    client.publish(topic, _value,true);
+    if (client.connected()) {
+        char topic[200];
+        sprintf (topic,"%s/%s", _topic,_subtopic);
+        client.publish(topic, _value,true);
+    }
 }
 
 void Mqtt::publish (const char * _topic, const char * _subtopic, int _value) {
-    char topic[200];
-    char value[10];
-    sprintf (topic,"%s/%s", _topic,_subtopic);
-    sprintf(value,"%d", _value);
-    client.publish(topic, value);
+    if (client.connected()) {
+        char topic[200];
+        char value[10];
+        sprintf (topic,"%s/%s", _topic,_subtopic);
+        sprintf(value,"%d", _value);
+        client.publish(topic, value);
+    }
 }
 
 /**
  * This methods is used to subscribe to a topic
  */
 void Mqtt::subscribe (Element *_element, const char * _subtopic) {
-    char topic[200];
-    sprintf (topic,"%s/app/%s/%s", mqttPrefix, _element->getId(),_subtopic);
-    client.subscribe(topic);
+    if (client.connected()) {
+        char topic[200];
+        sprintf (topic,"%s/app/%s/%s", mqttPrefix, _element->getId(),_subtopic);
+        client.subscribe(topic);
+    }
 }
 
 /**
